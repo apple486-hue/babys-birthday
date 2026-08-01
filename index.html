@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Vineet ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
+font-family:Poppins,sans-serif;
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+.container{
+padding:60px 20px;
+position:relative;
+z-index:5;
+}
+
+h1{
+font-family:'Dancing Script',cursive;
+font-size:70px;
+margin-bottom:15px;
+animation: glow 2s infinite alternate;
+}
+
+h2{
+font-size:35px;
+margin-bottom:30px;
+}
+
+.message{
+max-width:850px;
+margin:auto;
+font-size:20px;
+line-height:1.9;
+background:rgba(255,255,255,0.18);
+backdrop-filter:blur(8px);
+padding:35px;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,255,255,.2);
+}
+
+button{
+margin-top:35px;
+padding:18px 40px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:white;
+color:#ff3366;
+cursor:pointer;
+transition:.4s;
+font-weight:bold;
+}
+
+button:hover{
+transform:scale(1.08);
+background:#ffe6ec;
+}
+
+#surprise{
+display:none;
+margin-top:35px;
+font-size:28px;
+font-family:'Dancing Script',cursive;
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px white;
+}
+to{
+text-shadow:0 0 30px white,
+0 0 60px pink;
+}
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+color:#fff;
+animation:float 8s linear infinite;
+opacity:.7;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+footer{
+margin:50px 0;
+font-size:18px;
+opacity:.9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<audio autoplay loop controls style="margin-top:20px;">
+<source src="romantic-song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>Happy Birthday ❤️</h1>
+
+<h2>My Dearest Vineet 💕</h2>
+
+<div class="message">
+
+<p>
+
+Happy Birthday, my love. ❤️
+
+Today is one of my favorite days because it's the day the world was blessed with someone as wonderful as you. Every moment with you fills my heart with happiness, comfort, and love. Thank you for being my biggest smile, my safest place, and the person who makes ordinary days feel magical.
+
+I hope this birthday brings you endless laughter, success, good health, and every dream you've been wishing for. No matter where life takes us, I promise to always cherish every memory we create together. You deserve all the love, happiness, and beautiful moments this world has to offer.
+
+You are truly one of the most precious parts of my life, and I feel incredibly lucky to celebrate another year of your journey.
+
+Happy Birthday once again, my baby. I love you today, tomorrow, and always. ❤️✨
+
+</p>
+
+</div>
+
+<button onclick="showLove()">
+🎁 Open Your Birthday Surprise
+</button>
+
+<div id="surprise">
+💖 I Love You Forever, Vineet. 💖<br><br>
+You will always have a special place in my heart. ❤️🌹
+</div>
+
+<footer>
+Made with ❤️ especially for Vineet
+</footer>
+
+</div>
+
+<script>
+
+function showLove(){
+
+document.getElementById("surprise").style.display="block";
+
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*35)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
